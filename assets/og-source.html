@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Social preview source</title>
+<!-- Source for assets/og.png (1200x630). Re-render with the command in README.md. -->
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    background: #07090d; color: #e8eef5; font-family: 'DM Sans', sans-serif;
+    position: relative; padding: 72px 80px;
+  }
+  body::before {
+    content: ''; position: absolute; inset: 0;
+    background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+    background-size: 56px 56px;
+    -webkit-mask-image: radial-gradient(ellipse 70% 80% at 80% 20%, #000 20%, transparent 75%);
+  }
+  body::after {
+    content: ''; position: absolute; width: 760px; height: 760px; right: -260px; top: -320px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,229,187,.16) 0%, transparent 65%);
+  }
+  .top { position: relative; z-index: 1; display: flex; align-items: center; gap: 16px; }
+  .mark { width: 56px; height: 56px; border-radius: 14px; background: #00e5bb; color: #03140f; display: grid; place-items: center; font-family: 'Syne'; font-weight: 800; font-size: 22px; }
+  .who { font-family: 'DM Mono'; font-size: 22px; color: #92a1b3; }
+  .who b { color: #e8eef5; font-weight: 500; }
+  h1 { position: relative; z-index: 1; font-family: 'Syne'; font-weight: 800; font-size: 76px; line-height: 1.02; letter-spacing: -0.035em; margin-top: 48px; max-width: 980px; }
+  h1 span { color: #00e5bb; }
+  .row { position: absolute; z-index: 1; left: 80px; right: 80px; bottom: 68px; display: flex; align-items: center; gap: 12px; }
+  .chip { font-family: 'DM Mono'; font-size: 20px; padding: 10px 18px; border-radius: 999px; border: 1px solid rgba(255,255,255,.16); color: #c9d3de; background: rgba(255,255,255,.03); }
+  .chip.live { color: #3fb950; border-color: rgba(63,185,80,.45); background: rgba(63,185,80,.08); }
+  .url { margin-left: auto; font-family: 'DM Mono'; font-size: 20px; color: #92a1b3; }
+</style>
+</head>
+<body>
+  <div class="top"><div class="mark">AS</div><div class="who"><b>Anshumaan Singh</b> · software engineer · co-founder, Tumblrr AI</div></div>
+  <h1>I build tools for problems teams notice <span>too late.</span></h1>
+  <div class="row">
+    <span class="chip live">● Tumblrr AI</span><span class="chip live">● BillBrake</span><span class="chip">PasteProof</span>
+    <span class="url">anshumaansinghh.github.io</span>
+  </div>
+</body>
+</html>
